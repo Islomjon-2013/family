@@ -2,7 +2,7 @@ const review = [
   {
     id: 1,
     name: "Shukhrat",
-    job: "34 years old",
+    job: "03.23.1989",
     img: "./images/1.jpg",
   },
   {
@@ -13,20 +13,20 @@ const review = [
   },
   {
     id: 3,
-    name: "Islomjon",
-    job: "10 years old",
+    name: "Muhammadamin",
+    job: "23.02.2021",
     img: "./images/3.jpg",
   },
   {
     id: 4,
     name: "Mustafo",
-    job: "7 years old",
+    job: "15.01.2016",
     img: "./images/4.jpg",
   },
   {
     id: 5,
-    name: "Muhammadamin",
-    job: "2 years old",
+    name: "Hulkaroy",
+    job: "12.04.1991",
     img: "./images/5.jpg",
   },
 ];
@@ -35,8 +35,8 @@ let job = document.getElementById("job");
 let img = document.getElementById("person-img");
 let prevbtn = document.getElementById("prev");
 let nextbtn = document.getElementById("next");
-let randombtn = document.getElementById("random");
-let currentItem = 0;
+
+let currentItem = 3;
 window.addEventListener("DOMContentLoaded", function () {
   showPerson(currentItem);
 });
@@ -46,6 +46,7 @@ function showPerson(person) {
   author.textContent = item.name;
   job.textContent = item.job;
 }
+
 nextbtn.addEventListener("click", function () {
   currentItem++;
   if (currentItem > review.length - 1) {
